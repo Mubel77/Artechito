@@ -1,0 +1,190 @@
+{
+  "header": {
+    "logo": "/logo07.png",
+    "logoAlt": "Artechito SBI Logo",
+    "menu": [
+      { "label": "Home", "href": "#home" },
+      { "label": "Nosotros", "href": "#nosotros" },
+      { "label": "Demo", "href": "#demo" },
+      { "label": "Documentación", "href": "#documentacion" },
+      { "label": "Precios", "href": "#precios" },
+      { "label": "Equipo", "href": "#equipo" },
+      { "label": "Contacto", "href": "#contacto" }
+    ]
+  },
+  "hero": {
+    "title": "SBI – Sistema de Boletería Inteligente con IA",
+    "subtitle": "Consultá tu base de datos en lenguaje natural",
+    "cta1": "Probar DEMO",
+    "cta2": "Descargar versión FREE",
+    "qrUrl": "https://sbi.artechito.com",
+    "heroImage": "/logo07.png"
+  },
+  "problematica": {
+    "title": "La Problemática Actual",
+    "items": [
+      "Dificultad para consultar ventas, obras y recaudación de manera rápida",
+      "Necesidad de conocimientos técnicos en SQL para acceder a datos",
+      "Procesos manuales que consumen tiempo valioso",
+      "Falta de automatización en reportes y análisis",
+      "Riesgo de errores humanos en consultas complejas"
+    ]
+  },
+  "solucion": {
+    "title": "Análisis y Solución",
+    "description": "Después de evaluar múltiples alternativas, elegimos una solución basada en Inteligencia Artificial combinada con automatización avanzada.",
+    "alternatives": [
+      "Sistemas de reportería tradicionales",
+      "Consultas SQL manuales",
+      "Dashboards estáticos"
+    ],
+    "benefits": [
+      "Accesibilidad técnica: cualquier persona puede hacer consultas",
+      "Respuestas en lenguaje natural",
+      "Automatización completa del flujo de trabajo",
+      "Integración con herramientas existentes"
+    ]
+  },
+  "database": {
+    "title": "Base de Datos Relacional",
+    "description": "Nuestro sistema utiliza un modelo de base de datos robusto y escalable diseñado específicamente para la gestión de boletería teatral.",
+    "entities": [
+      { "name": "Obras", "description": "Información de obras teatrales" },
+      { "name": "Salas", "description": "Gestión de espacios y aforo" },
+      { "name": "Entradas", "description": "Control de tickets vendidos" },
+      { "name": "Clientes", "description": "Base de datos de compradores" },
+      { "name": "Precios", "description": "Gestión dinámica de precios" }
+    ],
+    "diagramPlaceholder": true
+  },
+  "arquitectura": {
+    "title": "Arquitectura Tecnológica",
+    "description": "Sistema modular e integrado que conecta múltiples tecnologías para ofrecer una experiencia fluida y potente.",
+    "technologies": [
+      { "name": "Supabase", "description": "Base de datos PostgreSQL en la nube", "url": "https://supabase.com/dashboard/project/ldpyvcsriqwcmkztawex/database/schemas" },
+      { "name": "n8n", "description": "Automatización de flujos de trabajo", "url": "https://cesarm21.app.n8n.cloud/webhook/prod-api" },
+      { "name": "Python", "description": "Procesamiento y lógica del sistema", "url": "https://github.com/CesarM2105/automatizacion-n8n" },
+      { "name": "Gemini AI", "description": "Inteligencia artificial para lenguaje natural" },
+      { "name": "Google Drive", "description": "Almacenamiento de reportes" },
+      { "name": "Gmail", "description": "Envío automatizado de reportes" }
+    ],
+    "flow": [
+      "Usuario hace consulta en Python",
+      "Webhook envía solicitud a n8n",
+      "n8n procesa con Gemini AI",
+      "Consulta Supabase",
+      "Genera respuesta + reportes",
+      "Guarda en Drive",
+      "Envía por Gmail"
+    ]
+  },
+  "requisitos": {
+    "title": "Cumplimiento de Requisitos",
+    "items": [
+      { "text": "Consultas en lenguaje natural", "completed": true },
+      { "text": "Generación de reportes en Excel", "completed": true },
+      { "text": "Guardado automático en Drive", "completed": true },
+      { "text": "Envío de mails automatizado", "completed": true },
+      { "text": "Flujo de trabajo n8n", "completed": true },
+      { "text": "Base de datos relacional", "completed": true },
+      { "text": "Programa Python funcional", "completed": true }
+    ]
+  },
+  "valor": {
+    "title": "Valor del Producto",
+    "cards": [
+      { "icon": "clock", "title": "Ahorro de Tiempo", "description": "Reduce consultas de horas a segundos" },
+      { "icon": "shield-check", "title": "Reduce Errores", "description": "Elimina errores humanos en consultas" },
+      { "icon": "zap", "title": "Automatización", "description": "Flujos de trabajo completamente automatizados" },
+      { "icon": "trending-up", "title": "Escalable", "description": "Crece con tu negocio" },
+      { "icon": "smile", "title": "Fácil de Usar", "description": "No requiere conocimientos técnicos" }
+    ]
+  },
+  "demo": {
+    "title": "Demo del Sistema",
+    "description": "Mira cómo funciona SBI en acción",
+    "videoPlaceholder": true,
+    "buttons": [
+      { "text": "Ver Demo", "variant": "primary" },
+      { "text": "Descargar FREE", "variant": "secondary" },
+      { "text": "Comprar PREMIUM", "variant": "accent" }
+    ],
+    "note": "Versión FREE disponible por 30 días - PREMIUM con acceso completo"
+  },
+  "documentacion": {
+    "title": "Documentación",
+    "description": "Toda la información técnica que necesitas",
+    "docs": [
+      { "title": "Manual Técnico", "url": "#", "icon": "book-open" },
+      { "title": "Manual de Instalación", "url": "#", "icon": "download" },
+      { "title": "API Python", "url": "https://github.com/CesarM2105/automatizacion-n8n", "icon": "code" },
+      { "title": "Flujo n8n", "url": "https://cesarm21.app.n8n.cloud/webhook/prod-api", "icon": "workflow" },
+      { "title": "Base de Datos SQL", "url": "https://supabase.com/dashboard/project/ldpyvcsriqwcmkztawex/database/schemas", "icon": "database" },
+      { "title": "PDF del Proyecto", "url": "#", "icon": "file-text" }
+    ]
+  },
+  "precios": {
+    "title": "Planes y Precios",
+    "plans": [
+      {
+        "name": "FREE",
+        "price": "Gratis",
+        "duration": "30 días",
+        "features": [
+          { "text": "Consultas simples", "included": true },
+          { "text": "Reportes automáticos", "included": false },
+          { "text": "Guardado en Drive", "included": false },
+          { "text": "Envío de emails", "included": false },
+          { "text": "Consola Python", "included": true },
+          { "text": "Soporte técnico", "included": false }
+        ],
+        "cta": "Probar Gratis",
+        "highlighted": false
+      },
+      {
+        "name": "PREMIUM",
+        "price": "Consultar",
+        "duration": "Sin límites",
+        "features": [
+          { "text": "Consultas ilimitadas", "included": true },
+          { "text": "Reportes automáticos", "included": true },
+          { "text": "Guardado en Drive", "included": true },
+          { "text": "Envío de emails", "included": true },
+          { "text": "Consola Python", "included": true },
+          { "text": "Soporte técnico", "included": true }
+        ],
+        "cta": "Comprar Premium",
+        "highlighted": true
+      }
+    ]
+  },
+  "equipo": {
+    "title": "Nuestro Equipo",
+    "description": "El equipo detrás de SBI",
+    "members": [
+      { "name": "Loredana Bejarano", "role": "Desarrolladora" },
+      { "name": "Julián Duarte", "role": "Desarrollador" },
+      { "name": "Mauricio Cuellar", "role": "Desarrollador" },
+      { "name": "César Mendoza", "role": "Desarrollador" },
+      { "name": "Rocío Pagliarulo", "role": "Desarrolladora" }
+    ]
+  },
+  "contacto": {
+    "title": "Contacto",
+    "description": "Estamos aquí para ayudarte",
+    "email": "contacto@artechito.com",
+    "phone": "+54 9 11 1234-5678",
+    "whatsapp": "+5491112345678"
+  },
+  "footer": {
+    "copyright": "© 2024 Artechito - SBI. Todos los derechos reservados.",
+    "links": [
+      { "text": "Términos y Condiciones", "url": "#" },
+      { "text": "Política de Privacidad", "url": "#" }
+    ],
+    "social": [
+      { "platform": "GitHub", "url": "https://github.com/CesarM2105/automatizacion-n8n", "icon": "github" },
+      { "platform": "LinkedIn", "url": "#", "icon": "linkedin" }
+    ]
+  }
+}

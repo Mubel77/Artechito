@@ -6,7 +6,7 @@ export default function Hero({ data }) {
         {/* Central subtle panel */}
         <div className="w-11/12 md:w-3/4 lg:w-2/3 h-4/5 rounded-3xl bg-white/70 backdrop-blur-md border border-white/25 shadow-inner relative">
           {/* Circuit SVG as decorative element */}
-          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style={{opacity: 0.12}}>
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style={{opacity: 0.04}}>
             <defs>
               <linearGradient id="g1" x1="0" x2="1">
                 <stop offset="0%" stopColor="#60A5FA" />
@@ -33,19 +33,19 @@ export default function Hero({ data }) {
       </div>
 
       {/* Colored bubbles (static, low opacity) */}
-      <div className="absolute -left-12 top-14 w-56 h-56 rounded-full bg-blue-300 opacity-35 filter blur-2xl pointer-events-none"></div>
-      <div className="absolute right-8 top-36 w-44 h-44 rounded-full bg-green-300 opacity-32 filter blur-xl pointer-events-none"></div>
-      <div className="absolute left-1/2 bottom-8 transform -translate-x-1/2 w-72 h-72 rounded-full bg-violet-300 opacity-28 filter blur-3xl pointer-events-none"></div>
+      <div className="absolute -left-12 top-14 w-56 h-56 rounded-full bg-blue-300 opacity-15 filter blur-2xl pointer-events-none"></div>
+      <div className="absolute right-8 top-36 w-44 h-44 rounded-full bg-violet-300 opacity-12 filter blur-xl pointer-events-none"></div>
+      <div className="absolute left-1/2 bottom-8 transform -translate-x-1/2 w-72 h-72 rounded-full bg-blue-300 opacity-10 filter blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="flex items-center mb-6">
               <img src={data.heroImage} alt="Artechito logo" className="h-20 w-20 rounded-md mr-4 object-contain z-20" />
-              <span className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-500 to-violet-500 z-20">Artechito</span>
+              <span className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600 z-20">Artechito</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-violet-600 to-green-600 z-20">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600 z-20">
               {data.title}
             </h1>
             <p className="text-xl md:text-2xl text-slate-700 mb-8 z-20">
@@ -60,7 +60,7 @@ export default function Hero({ data }) {
               </a>
               <a
                 href="#precios"
-                className="px-8 py-4 bg-white text-green-600 border-2 border-green-200 rounded-lg font-semibold hover:bg-green-50 transition-all duration-200 text-center"
+                className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-200 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 text-center"
               >
                 {data.cta2}
               </a>

@@ -14,7 +14,7 @@ export default function Header({ data }) {
               alt={data.logoAlt}
               className="h-14 w-14 object-contain rounded-md"
             />
-            <span className="ml-3 text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-500 to-violet-500">
+            <span className="ml-3 text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600">
               Artechito
             </span>
           </div>

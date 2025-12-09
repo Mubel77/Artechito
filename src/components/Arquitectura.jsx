@@ -1,8 +1,8 @@
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 export default function Arquitectura({ data }) {
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section className="py-16 bg-gradient-to-br from-blue-50 via-green-50 to-violet-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -37,15 +37,12 @@ export default function Arquitectura({ data }) {
 
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Flujo del Sistema</h3>
-          <div className="flex flex-wrap justify-center items-center gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.flow.map((step, index) => (
-              <div key={index} className="flex items-center">
-                <div className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-lg font-medium text-center min-w-[180px]">
+              <div key={index} className="flex items-center justify-center">
+                <div className="bg-gradient-to-r from-blue-500 to-violet-500 text-white px-4 py-3 rounded-lg font-medium text-center text-sm min-w-[140px]">
                   {step}
                 </div>
-                {index < data.flow.length - 1 && (
-                  <ArrowRight className="text-gray-400 mx-2" size={24} />
-                )}
               </div>
             ))}
           </div>

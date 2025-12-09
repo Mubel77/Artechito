@@ -57,7 +57,7 @@ export default function Demo({ data }) {
   const videoUrl = data.videoUrl || '';
 
   return (
-    <section id="demo" className="py-16 bg-white">
+    <section id="demo" className="py-16 bg-gradient-to-br from-blue-50 via-green-50 to-violet-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -96,10 +96,10 @@ export default function Demo({ data }) {
               }}
               className={`px-8 py-4 rounded-lg font-semibold transition-all duration-200 text-center ${
                 button.variant === 'primary'
-                  ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:shadow-lg transform hover:-translate-y-1'
+                  ? 'bg-gradient-to-r from-blue-600 to-violet-500 text-white hover:shadow-lg transform hover:-translate-y-1'
                   : button.variant === 'secondary'
                   ? 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
-                  : 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:shadow-lg transform hover:-translate-y-1'
+                  : 'bg-gradient-to-r from-violet-500 to-blue-600 text-white hover:shadow-lg transform hover:-translate-y-1'
               }`}
             >
               {button.text}

@@ -2,7 +2,7 @@ import { CheckCircle, Lightbulb } from 'lucide-react';
 
 export default function Solucion({ data }) {
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 to-cyan-50">
+    <section className="py-16 bg-gradient-to-br from-blue-50 via-green-50 to-violet-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
@@ -16,7 +16,7 @@ export default function Solucion({ data }) {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <div className="flex items-center mb-4">
-              <Lightbulb className="text-orange-500 mr-3" size={32} />
+              <Lightbulb className="text-violet-500 mr-3" size={32} />
               <h3 className="text-2xl font-bold text-gray-900">Alternativas Evaluadas</h3>
             </div>
             <ul className="space-y-3">

@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
+import DecorativeBackground from './components/DecorativeBackground';
 import Hero from './components/Hero';
+import Partners from './components/Partners';
+import N8nFlow from './components/N8nFlow';
 import Problematica from './components/Problematica';
 import Solucion from './components/Solucion';
 import Database from './components/Database';
@@ -55,12 +58,14 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-green-50 to-violet-50 text-slate-900">
       <Header data={data.header} />
       <Hero data={data.hero} />
+      <Partners data={data.partners} />
       <Problematica data={data.problematica} />
       <Solucion data={data.solucion} />
       <Database data={data.database} />
       <Arquitectura data={data.arquitectura} />
       <Requisitos data={data.requisitos} />
       <Valor data={data.valor} />
+      <N8nFlow data={data.n8nFlow} />
       <Demo data={data.demo} />
       <Documentacion data={data.documentacion} />
       <Precios data={data.precios} />

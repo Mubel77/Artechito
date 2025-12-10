@@ -14,7 +14,7 @@ export default function Problematica({ data }) {
           {data.items.map((item, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-violet-50 p-6 rounded-lg border-l-4 border-violet-500 hover:shadow-lg transition-shadow duration-200"
+              className="bg-white p-6 rounded-lg border-2 border-violet-400 hover:shadow-lg hover:border-violet-600 transition-all duration-200"
             >
               <AlertCircle className="text-violet-500 mb-3" size={32} />
               <p className="text-gray-700">{item}</p>

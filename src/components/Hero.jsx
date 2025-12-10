@@ -40,10 +40,6 @@ export default function Hero({ data }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="flex items-center mb-6">
-              <img src={data.heroImage} alt="Artechito logo" className="h-20 w-20 rounded-md mr-4 object-contain z-20" />
-              <span className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600 z-20">Artechito</span>
-            </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600 z-20">
               {data.title}

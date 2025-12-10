@@ -1,4 +1,5 @@
 import { Database as DatabaseIcon } from 'lucide-react';
+import ImageLightbox from './ImageLightbox';
 
 export default function Database({ data }) {
   return (
@@ -26,11 +27,21 @@ export default function Database({ data }) {
           ))}
         </div>
 
-        {data.diagramPlaceholder && (
-          <div className="bg-gray-100 rounded-lg p-12 text-center">
-            <DatabaseIcon className="mx-auto text-gray-400 mb-4" size={64} />
-            <p className="text-gray-600 text-lg">Diagrama de Base de Datos</p>
+        {data.image ? (
+          <div className="text-center">
+            <ImageLightbox
+              src={data.image}
+              alt="Diagrama de Base de Datos"
+              className="mx-auto rounded-lg shadow-md w-full max-w-4xl"
+            />
           </div>
+        ) : (
+          data.diagramPlaceholder && (
+            <div className="bg-gray-100 rounded-lg p-12 text-center">
+              <DatabaseIcon className="mx-auto text-gray-400 mb-4" size={64} />
+              <p className="text-gray-600 text-lg">Diagrama de Base de Datos</p>
+            </div>
+          )
         )}
       </div>
     </section>

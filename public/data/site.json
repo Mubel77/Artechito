@@ -55,7 +55,8 @@
       { "name": "Clientes", "description": "Base de datos de compradores" },
       { "name": "Precios", "description": "Gestión dinámica de precios" }
     ],
-    "diagramPlaceholder": true
+    "diagramPlaceholder": true,
+    "image": "flujoSupabase.png"
   },
   "arquitectura": {
     "title": "Arquitectura Tecnológica",
@@ -168,6 +169,20 @@
       { "name": "César Mendoza", "role": "Desarrollador" },
       { "name": "Rocío Pagliarulo", "role": "Desarrolladora" }
     ]
+  },
+  "partners": {
+    "title": "Socios y Aliados",
+    "description": "Este proyecto fue desarrollado junto a instituciones aliadas que impulsan la formación tecnológica y la innovación.",
+    "logos": [
+      { "name": "Fundación Pescar", "src": "/LogFundacionPescar.png" },
+      { "name": "Artech", "src": "/ArtechLogo.webp" }
+    ]
+  },
+  "n8nFlow": {
+    "title": "Flujo Automatizado en n8n",
+    "subtitle": "Nuestro sistema integra IA, base de datos y reportes automáticos mediante un flujo orquestado en n8n.",
+    "description": "Este flujo interpreta consultas en lenguaje natural, genera SQL dinámico, ejecuta consultas en Supabase y permite crear reportes, enviarlos por correo o almacenarlos en Google Drive.",
+    "image": "/flujon8n.jpeg"
   },
   "contacto": {
     "title": "Contacto",

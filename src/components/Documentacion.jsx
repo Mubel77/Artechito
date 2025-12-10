@@ -25,12 +25,12 @@ export default function Documentacion({ data }) {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {data.docs.map((doc, index) => {
             const Icon = iconMap[doc.icon];
+            const isLocalPdf = typeof doc.url === 'string' && doc.url.toLowerCase().endsWith('.pdf') && doc.url.startsWith('/');
             return (
               <a
                 key={index}
                 href={doc.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...(isLocalPdf ? { download: '' } : { target: '_blank', rel: 'noopener noreferrer' })}
                 className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 group"
               >
                 <Icon className="text-blue-600 mb-3 group-hover:text-cyan-500 transition-colors" size={32} />

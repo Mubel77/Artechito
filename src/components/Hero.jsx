@@ -47,20 +47,7 @@ export default function Hero({ data }) {
             <p className="text-xl md:text-2xl text-slate-700 mb-8 z-20">
               {data.subtitle}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-8 z-20">
-              <a
-                href="#demo"
-                className="px-8 py-4 bg-gradient-to-r from-blue-400 to-violet-500 text-white rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 text-center"
-              >
-                {data.cta1}
-              </a>
-              <a
-                href="#precios"
-                className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-200 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 text-center"
-              >
-                {data.cta2}
-              </a>
-            </div>
+            <div className="mb-8" />
           </div>
 
           <div className="flex justify-center items-center z-20">

@@ -1,19 +1,18 @@
 {
   "header": {
-    "logo": "/logo07.png",
+    "logo": "/SBI_logo (1).png",
     "logoAlt": "Artechito SBI Logo",
     "menu": [
       { "label": "Home", "href": "#home" },
       { "label": "Nosotros", "href": "#nosotros" },
       { "label": "Demo", "href": "#demo" },
       { "label": "Documentación", "href": "#documentacion" },
-      { "label": "Precios", "href": "#precios" },
       { "label": "Equipo", "href": "#equipo" },
       { "label": "Contacto", "href": "#contacto" }
     ]
   },
   "hero": {
-    "title": "SBI – Sistema de Boletería Inteligente con IA",
+    "title": "SBI – Sistema de Boletería Teatral Inteligente con IA",
     "subtitle": "Consultá tu base de datos en lenguaje natural",
     "cta1": "Probar DEMO",
     "cta2": "Descargar versión FREE",
@@ -62,8 +61,8 @@
     "title": "Arquitectura Tecnológica",
     "description": "Sistema modular e integrado que conecta múltiples tecnologías para ofrecer una experiencia fluida y potente.",
     "technologies": [
-      { "name": "Supabase", "description": "Base de datos PostgreSQL en la nube", "url": "https://supabase.com/dashboard/project/ldpyvcsriqwcmkztawex/database/schemas" },
-      { "name": "n8n", "description": "Automatización de flujos de trabajo", "url": "https://cesarm21.app.n8n.cloud/webhook/prod-api" },
+      { "name": "Supabase", "description": "Base de datos PostgreSQL en la nube", "url": "https://supabase.com/dashboard/project/eclekpoxdwjvxkrkxlwy" },
+      { "name": "n8n", "description": "Automatización de flujos de trabajo", "url": "https://github.com/Aelemar95-gif/n8n-artech/tree/main" },
       { "name": "Python", "description": "Procesamiento y lógica del sistema", "url": "https://github.com/CesarM2105/automatizacion-n8n" },
       { "name": "Gemini AI", "description": "Inteligencia artificial para lenguaje natural" },
       { "name": "Google Drive", "description": "Almacenamiento de reportes" },
@@ -105,12 +104,15 @@
     "title": "Demo del Sistema",
     "description": "Mira cómo funciona SBI en acción",
     "videoPlaceholder": true,
+    "videoUrl": "Video_funcionamiento_proyecto.mp4",
     "buttons": [
-      { "text": "Ver Demo", "variant": "primary" },
-      { "text": "Descargar FREE", "variant": "secondary" },
-      { "text": "Comprar PREMIUM", "variant": "accent" }
-    ],
-    "note": "Versión FREE disponible por 30 días - PREMIUM con acceso completo"
+      { "text": "Ver Demo Completo", "variant": "primary", "href": "#demo" }
+    ]
+  },
+  "iaExplanation": {
+    "title": "Explicación del Sistema con IA",
+    "subtitle": "Cómo nuestro sistema inteligente transforma la gestión de boletería teatral",
+    "url": "VideoExplicativoConIA.mp4"
   },
   "documentacion": {
     "title": "Documentación",
@@ -124,52 +126,42 @@
       { "title": "PDF del Proyecto", "url": "#", "icon": "file-text" }
     ]
   },
-  "precios": {
-    "title": "Planes y Precios",
-    "plans": [
-      {
-        "name": "FREE",
-        "price": "Gratis",
-        "duration": "30 días",
-        "features": [
-          { "text": "Consultas simples", "included": true },
-          { "text": "Reportes automáticos", "included": false },
-          { "text": "Guardado en Drive", "included": false },
-          { "text": "Envío de emails", "included": false },
-          { "text": "Consola Python", "included": true },
-          { "text": "Soporte técnico", "included": false }
-        ],
-        "cta": "Probar Gratis",
-        "highlighted": false
-      },
-      {
-        "name": "PREMIUM",
-        "price": "Consultar",
-        "duration": "Sin límites",
-        "features": [
-          { "text": "Consultas ilimitadas", "included": true },
-          { "text": "Reportes automáticos", "included": true },
-          { "text": "Guardado en Drive", "included": true },
-          { "text": "Envío de emails", "included": true },
-          { "text": "Consola Python", "included": true },
-          { "text": "Soporte técnico", "included": true }
-        ],
-        "cta": "Comprar Premium",
-        "highlighted": true
-      }
-    ]
-  },
-  "equipo": {
-    "title": "Nuestro Equipo",
-    "description": "El equipo detrás de SBI",
-    "members": [
-      { "name": "Loredana Bejarano", "role": "Desarrolladora" },
-      { "name": "Julián Duarte", "role": "Desarrollador" },
-      { "name": "Mauricio Cuellar", "role": "Desarrollador" },
-      { "name": "César Mendoza", "role": "Desarrollador" },
-      { "name": "Rocío Pagliarulo", "role": "Desarrolladora" }
-    ]
-  },
+"equipo": {
+  "title": "Nuestro Equipo",
+  "description": "El equipo detrás de SBI",
+  "members": [
+    { 
+      "name": "Loredana Bejarano", 
+      "role": "Arquitecta de Base de Datos",
+      "image": "/Loredana.jpeg",
+      "linkedin": "linkedin.com/in/loredana-bejarano/"
+    },
+    { 
+      "name": "Julián Duarte", 
+      "role": "Ingeniero de Automatización en n8n",
+      "image": "/julian.jpeg",
+      "linkedin": "https://www.linkedin.com/in/j-duarte-sistemas/"
+    },
+    { 
+      "name": "Mauricio Cuellar", 
+      "role": "Licenciado en Análisis de Sistemas",
+      "image": "/Mauricio.png",
+      "linkedin": "https://www.linkedin.com/in/mauricio-abel-cuellar-desarrolladorweb/"
+    },
+    { 
+      "name": "César Mendoza", 
+      "role": "Desarrollador Backend Python",
+      "image": "/Cesar.jpeg",
+      "linkedin": "https://www.linkedin.com/in/julio-cesar-mendoza-revollo/"
+    },
+    { 
+      "name": "Rocío Pagliarulo", 
+      "role": "Desarrolladora de Base de Datos",
+      "image": "/rocio.jpeg",
+      "linkedin": "https://www.linkedin.com/in/rociopagliarulo/"
+    }
+  ]
+},
   "partners": {
     "title": "Socios y Aliados",
     "description": "Este proyecto fue desarrollado junto a instituciones aliadas que impulsan la formación tecnológica y la innovación.",
@@ -182,7 +174,7 @@
     "title": "Flujo Automatizado en n8n",
     "subtitle": "Nuestro sistema integra IA, base de datos y reportes automáticos mediante un flujo orquestado en n8n.",
     "description": "Este flujo interpreta consultas en lenguaje natural, genera SQL dinámico, ejecuta consultas en Supabase y permite crear reportes, enviarlos por correo o almacenarlos en Google Drive.",
-    "image": "/flujon8n.jpeg"
+    "image": "/fotoflujon8n.jpeg"
   },
   "contacto": {
     "title": "Contacto",

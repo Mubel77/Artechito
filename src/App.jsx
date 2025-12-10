@@ -9,10 +9,10 @@ import Solucion from './components/Solucion';
 import Database from './components/Database';
 import Arquitectura from './components/Arquitectura';
 import Requisitos from './components/Requisitos';
-import Valor from './components/Valor';
 import Demo from './components/Demo';
+import Valor from './components/Valor';
+import IAExplanation from './components/IAExplanation';
 import Documentacion from './components/Documentacion';
-import Precios from './components/Precios';
 import Equipo from './components/Equipo';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
@@ -64,11 +64,14 @@ function App() {
       <Database data={data.database} />
       <Arquitectura data={data.arquitectura} />
       <Requisitos data={data.requisitos} />
+      {/* IA explanation video placed under Requisitos */}
+      {data.iaExplanation && (
+        <IAExplanation data={data.iaExplanation} />
+      )}
       <Valor data={data.valor} />
       <N8nFlow data={data.n8nFlow} />
       <Demo data={data.demo} />
       <Documentacion data={data.documentacion} />
-      <Precios data={data.precios} />
       <Equipo data={data.equipo} />
       <Contacto data={data.contacto} />
       <Footer data={data.footer} />

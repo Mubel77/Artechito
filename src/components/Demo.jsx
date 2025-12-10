@@ -139,7 +139,7 @@ export default function Demo({ data }) {
                       frameBorder="0"
                     />
                   ) : (
-                    <video ref={videoRef} src={videoUrl} controls autoPlay className="w-full h-full object-cover" />
+                   <video ref={videoRef} src={videoUrl} controls autoPlay className="w-full h-full object-cover" />
                   )
                 ) : (
                   <div className="text-white p-8">Video no disponible</div>

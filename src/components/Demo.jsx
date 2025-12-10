@@ -24,41 +24,35 @@ export default function Demo({ data }) {
   }, [isOpen]);
 
   async function tryLockLandscape() {
-    if (typeof window !== 'undefined' && 'screen' in window && screen.orientation && screen.orientation.lock) {
+    if (typeof window !== 'undefined' && screen?.orientation?.lock) {
       try {
         await screen.orientation.lock('landscape');
-      } catch (err) {
-        // ignore errors (may not be allowed)
-      }
+      } catch (err) {}
     }
   }
 
-  const openModal = async () => {
+  const openModal = () => {
     setIsOpen(true);
-    // small delay then try lock
     setTimeout(() => tryLockLandscape(), 300);
   };
 
   const closeModal = () => {
     setIsOpen(false);
-    // try unlock
-    if (typeof window !== 'undefined' && 'screen' in window && screen.orientation && screen.orientation.unlock) {
+    if (screen?.orientation?.unlock) {
       try {
         screen.orientation.unlock();
       } catch (err) {}
     }
-    // pause video if using a <video>
-    if (videoRef.current && typeof videoRef.current.pause === 'function') {
-      videoRef.current.pause();
-    }
+    if (videoRef.current?.pause) videoRef.current.pause();
   };
 
-  // choose video embed: prefer data.videoUrl (YouTube or direct), fallback to placeholder state
   const videoUrl = data.videoUrl || '';
 
   return (
     <section id="demo" className="py-16 bg-gradient-to-br from-blue-50 via-green-50 to-violet-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* TITULO */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             {data.title}
@@ -68,6 +62,7 @@ export default function Demo({ data }) {
           </p>
         </div>
 
+        {/* VIDEO PLACEHOLDER */}
         <div className="max-w-4xl mx-auto mb-12">
           {data.videoPlaceholder && (
             <div className="relative bg-gradient-to-br from-gray-100 to-white rounded-lg aspect-video flex items-center justify-center shadow-md">
@@ -82,64 +77,55 @@ export default function Demo({ data }) {
           )}
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-          {data.buttons.map((button, index) => (
-            <a
-              key={index}
-              href={button.href || '#contacto'}
-              onClick={(e) => {
-                // if primary and has a videoUrl, open modal instead of navigating
-                if (button.variant === 'primary' && videoUrl) {
-                  e.preventDefault();
-                  openModal();
-                }
-              }}
-              className={`px-8 py-4 rounded-lg font-semibold transition-all duration-200 text-center ${
-                button.variant === 'primary'
-                  ? 'bg-gradient-to-r from-blue-600 to-violet-500 text-white hover:shadow-lg transform hover:-translate-y-1'
-                  : button.variant === 'secondary'
-                  ? 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
-                  : 'bg-gradient-to-r from-violet-500 to-blue-600 text-white hover:shadow-lg transform hover:-translate-y-1'
-              }`}
-            >
-              {button.text}
-            </a>
-          ))}
+        {/* BOTÓN "VER VIDEO" */}
+        <div className="text-center mb-8">
+          <a
+            href={data.externalVideoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 rounded-lg font-semibold transition-all duration-200 text-center bg-blue-600 text-white hover:bg-blue-700 shadow-lg"
+          >
+            Ver Video Completo
+          </a>
         </div>
 
-        <p className="text-center text-gray-600 italic">
-          {data.note}
-        </p>
+        {/* NOTA */}
+        {data.note && (
+          <p className="text-center text-gray-600 italic">
+            {data.note}
+          </p>
+        )}
       </div>
 
-      {/* Modal overlay */}
+      {/* MODAL */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-black/60" onClick={closeModal} />
 
           <div className="relative z-50 max-w-4xl w-full mx-4 md:mx-0">
             <div className="bg-black rounded-xl overflow-hidden shadow-2xl">
+              
+              {/* BOTÓN CERRAR */}
               <button
                 onClick={closeModal}
-                className="absolute top-3 right-3 z-60 bg-white/10 hover:bg-white/20 p-2 rounded-full text-white"
-                aria-label="Cerrar"
+                className="absolute top-3 right-3 bg-white/10 hover:bg-white/20 p-2 rounded-full text-white"
               >
                 <X />
               </button>
 
+              {/* VIDEO */}
               <div className="w-full aspect-video bg-black flex items-center justify-center">
                 {videoUrl ? (
-                  // if youtube link, embed iframe; else if direct video (.mp4) use <video>
-                  (videoUrl.includes('youtube') || videoUrl.includes('youtu.be')) ? (
+                  videoUrl.includes('.mp4') ? (
+                    <video ref={videoRef} src={videoUrl} controls autoPlay className="w-full h-full object-cover" />
+                  ) : (
                     <iframe
                       title="Demo video"
-                      src={videoUrl.includes('embed') ? videoUrl : `https://www.youtube.com/embed/${extractYouTubeId(videoUrl)}?autoplay=1`}
+                      src={videoUrl}
                       className="w-full h-full"
                       allow="autoplay; fullscreen; picture-in-picture"
                       frameBorder="0"
                     />
-                  ) : (
-                   <video ref={videoRef} src={videoUrl} controls autoPlay className="w-full h-full object-cover" />
                   )
                 ) : (
                   <div className="text-white p-8">Video no disponible</div>
@@ -147,26 +133,15 @@ export default function Demo({ data }) {
               </div>
             </div>
 
-            {/* Mobile rotate hint */}
+            {/* AVISO DE ROTAR */}
             {isPortrait && (
-              <div className="mt-4 text-center text-sm text-gray-200">Por favor, girá tu dispositivo a horizontal para mejor visualización.</div>
+              <div className="mt-4 text-center text-sm text-gray-200">
+                Por favor, girá tu dispositivo a horizontal para mejor visualización.
+              </div>
             )}
           </div>
         </div>
       )}
     </section>
   );
-
-  function extractYouTubeId(url) {
-    try {
-      const u = new URL(url);
-      if (u.hostname === 'youtu.be') return u.pathname.slice(1);
-      if (u.searchParams.has('v')) return u.searchParams.get('v');
-      // fallback: try to parse last part
-      const parts = u.pathname.split('/');
-      return parts[parts.length - 1];
-    } catch (e) {
-      return url;
-    }
-  }
 }

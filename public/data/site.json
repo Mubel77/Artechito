@@ -14,7 +14,7 @@
   "hero": {
     "title": "SBI – Sistema de Boletería Teatral Inteligente con IA",
     "subtitle": "Consultá tu base de datos en lenguaje natural",
-    "qrUrl": "https://artechito.vercel.app",
+    "qrUrl": "/qr.png",
     "heroImage": "/logo07.png"
   },
   "problematica": {

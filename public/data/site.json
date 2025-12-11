@@ -14,9 +14,7 @@
   "hero": {
     "title": "SBI – Sistema de Boletería Teatral Inteligente con IA",
     "subtitle": "Consultá tu base de datos en lenguaje natural",
-    "cta1": "Probar DEMO",
-    "cta2": "Descargar versión FREE",
-    "qrUrl": "https://sbi.artechito.com",
+    "qrUrl": "https://artechito.vercel.app",
     "heroImage": "/logo07.png"
   },
   "problematica": {
@@ -120,12 +118,10 @@
     "title": "Documentación",
     "description": "Toda la información técnica que necesitas",
     "docs": [
-      { "title": "Manual Técnico", "url": "#", "icon": "book-open" },
-      { "title": "Manual de Instalación", "url": "#", "icon": "download" },
-      { "title": "API Python", "url": "https://github.com/CesarM2105/automatizacion-n8n", "icon": "code" },
-      { "title": "Flujo n8n", "url": "https://cesarm21.app.n8n.cloud/webhook/prod-api", "icon": "workflow" },
-      { "title": "Base de Datos SQL", "url": "https://supabase.com/dashboard/project/ldpyvcsriqwcmkztawex/database/schemas", "icon": "database" },
-      { "title": "PDF del Proyecto", "url": "#", "icon": "file-text" }
+      { "title": "API Python", "url": "https://drive.google.com/file/d/1wEC-MOHz0KbEMBHC5isLrdKTgUWQ7rRz/view?usp=drive_link", "icon": "code" },
+      { "title": "Flujo n8n", "url": "https://drive.google.com/file/d/1MUaf8dGHZuVgDV577-lsAqXy3ejZakKT/view?usp=drive_link", "icon": "workflow" },
+      { "title": "Base de Datos SQL", "url": "https://docs.google.com/document/d/1rfSRggMNwWCOip6zZBA7Wi9BAiufMQCzs4RuRX44KO0/edit?usp=sharing", "icon": "database" },
+      { "title": "PDF del Proyecto", "url": "https://drive.google.com/file/d/1jTJ9USGWiFJEz1yduZou8kM6WEs_o0mi/view?usp=drive_link", "icon": "file-text" }
     ]
   },
 "equipo": {
@@ -169,7 +165,9 @@
     "description": "Este proyecto fue desarrollado junto a instituciones aliadas que impulsan la formación tecnológica y la innovación.",
     "logos": [
       { "name": "Fundación Pescar", "src": "/LogFundacionPescar.png" },
-      { "name": "Artech", "src": "/ArtechLogo.webp" }
+      { "name": "Artech", "src": "/ArtechLogo.webp" },
+      { "name": "L'Oréal", "src": "/LOreal-Logo.png" },
+      { "name": "Karuna", "src": "/Karuna.png" }
     ]
   },
   "n8nFlow": {
@@ -186,7 +184,7 @@
     "whatsapp": "+5491112345678"
   },
   "footer": {
-    "copyright": "© 2024 Artechito - SBI. Todos los derechos reservados.",
+    "copyright": "© 2025 Artechito - SBI. Todos los derechos reservados.",
     "links": [
       { "text": "Términos y Condiciones", "url": "#" },
       { "text": "Política de Privacidad", "url": "#" }

@@ -61,7 +61,7 @@ export default function Hero({ data }) {
               <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-lg shadow-xl flex flex-col items-center">
                 <div className="relative">
                   <img
-                    src={"/public/qr.png"}
+                    src={"/qr.png"}
                     alt="QR Code"
                     className="w-44 h-44 rounded-md"
                   />
